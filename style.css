@@ -1,0 +1,131 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('static/tapestry.png');
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image on the page */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-color: rgb(0, 0, 54);
+    color: black;
+}
+
+.container-wrapper {
+    display: flex;
+    justify-content: center;  /* Center containers horizontally */
+    gap: 0px;                /* Space between the containers */
+    width: 100%;              /* Full width of the parent element (background) */
+    margin: 0 auto;           /* Ensure the wrapper itself is centered */
+}
+
+.container {
+    border-radius: 15px;
+    width: 70%;                /* Each container takes 40% of the parent's width */
+    box-sizing: border-box;    /* Ensures padding and border are included in the width calculation */
+    background-color: rgba(255, 255, 255, 0.4);
+    font-size: 32px;           /* Makes the text larger */
+    margin-left: 50px;         /* Adds larger margin to the left */
+    margin-right: 50px;        /* Adds larger margin to the right */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+.container_a {
+    width: 60%;                /* Each container takes 40% of the parent's width */
+    box-sizing: border-box;    /* Ensures padding and border are included in the width calculation */
+}
+
+.container_b {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 40%;                /* Each container takes 40% of the parent's width */
+    box-sizing: border-box;    /* Ensures padding and border are included in the width calculation */
+    background-color: rgba(255, 255, 255, 0.4);
+    color: white;
+}
+
+.trail {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    pointer-events: none; /* Ensures the trail doesn't interfere with mouse events */
+    animation: fadeOut 1s forwards; /* Fades out the trail dot */
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+nav.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding: 20px 20px;
+    background-color: #333;
+}
+
+nav.navbar .logo img {
+    width: 50px;
+    height: auto;
+}
+
+nav.navbar ul.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+nav.navbar ul.nav-links li {
+    margin-left: 20px;
+}
+
+nav.navbar ul.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+}
+
+nav.navbar ul.nav-links li a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 6px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav.navbar ul.nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav.navbar ul.nav-links li {
+        margin: 10px 0;
+    }
+
+    footer {
+        position: static;
+    }
+}
